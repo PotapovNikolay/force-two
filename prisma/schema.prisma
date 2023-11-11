@@ -1,0 +1,43 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Computer {
+  id          Int     @id @unique @default(autoincrement())
+  name        String
+  type        String
+  OS          String?
+  light       String?
+  guarantee   String?
+  CPU         String
+  GPU         String
+  RAM         String
+  memory      String
+  power       String
+  motherboard String
+  cooling     String
+  frame       String
+  count       Int     @default(10)
+  price       Int     @default(10000)
+  images      Image[] @relation("ComputerToImage")
+}
+
+model Image {
+  id        Int        @id @unique @default(autoincrement())
+  path      String
+  computers Computer[] @relation("ComputerToImage")
+}
+
+model Review {
+  id      Int     @id @unique @default(autoincrement())
+  text    String?
+  rate    Int
+  type    String
+  name    String
+  sername String?
+}

@@ -1,0 +1,15 @@
+.animate-shrink {
+    animation-name: shrink;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes shrink {
+    0% {
+        width: 100%;
+    }
+    100% {
+        width: 0;
+    }
+}

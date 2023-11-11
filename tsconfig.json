@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -19,9 +23,51 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": [
+        "./src/*"
+      ],
+      "styles/*": [
+        "./src/app/styles/*"
+      ],
+      "constants/*": [
+        "./src/utils/constants/*"
+      ],
+      "types/*": [
+        "./src/utils/types/*"
+      ],
+      "store/*": [
+        "./src/app/store/*"
+      ],
+      "enums/*": [
+        "./src/utils/enums/*"
+      ],
+      "hooks/*": [
+        "./src/utils/hooks/*"
+      ],
+      "components/*": [
+        "./src/components/*"
+      ],
+      "pages/*": [
+        "./src/app/(pages)/*"
+      ],
+      "assets/*": [
+        "./src/assets/*"
+      ],
+      "sequelize/*": [
+        "./src/sequelize/*"
+      ],
+      "services/*": [
+        "./src/utils/services/*"
+      ]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

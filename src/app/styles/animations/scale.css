@@ -1,0 +1,15 @@
+.animate-scale {
+    animation-name: scale;
+    animation-duration: 0.2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes scale {
+    0% {
+        width: 100%;
+    }
+    100% {
+        width: 100%;
+    }
+}
